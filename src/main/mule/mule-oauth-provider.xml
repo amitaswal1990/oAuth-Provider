@@ -18,7 +18,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<flow name="mule-oauth-providerFlow" doc:id="824697c4-6e4d-4286-98c0-ebcd8f73a35e" >
 		<http:listener doc:name="Listener" doc:id="8442cd23-c206-4062-b66e-c5eaf1097146" config-ref="HTTP_Listener_config" path="/createClient"/>
 		<oauth2-provider:create-client doc:name="Create client" doc:id="98d3e460-6d31-447b-ba43-5d922bbf89a9" config-ref="OAuth2_Provider_Config" clientId="#[attributes.headers.client_id]" type="CONFIDENTIAL" secret="#[attributes.headers.client_secret]" clientName="#[attributes.headers.client_name]" description='#[""]' principal='#[""]' redirectUris='#[["abc.com"]]' authorizedGrantTypes='#[["CLIENT_CREDENTIALS"]]'/>
-		<set-payload value='#["Client Created"]' doc:name="Set Payload" doc:id="42431609-7f72-4227-b753-8047d49c9e2b" />
+		<set-payload value='#["Client Created"]' doc:name="Set Payload This Repo" doc:id="42431609-7f72-4227-b753-8047d49c9e2b" />
 	</flow>
 	<flow name="mule-oauth-providerFlow1" doc:id="f124a791-ddb4-4e3e-849f-5e082b98a17d" >
 		<http:listener doc:name="Listener" doc:id="39c88328-c53f-4be9-887c-b024b8d7e411" config-ref="HTTP_Listener_config" path="/validate"/>
